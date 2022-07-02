@@ -10,6 +10,8 @@ A compilation of pages, elements made in HTML and CSS **connected to the topic o
 1. Penguin Mascot
 2. Ferris Wheel of course.
 
-The focus was on CSS Pseudo-classes, Transforms, Animations and Responsive Web Design.
+Live Page: https://mariacristinai.github.io/Amusement-Park/index.html
+
+The primary focus was on using CSS Pseudo-classes, Transforms, Animations and Responsive Web Design. 
 
 _The pages were made as certification projects for freeCodeCamp, while the animated elements themselves were created with the code provided, tweaked and adapted._
