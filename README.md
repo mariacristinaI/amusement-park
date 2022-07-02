@@ -1,5 +1,5 @@
 # Amusement-Park
-A compilation of pages, elements made in HTML and CSS **connected to the topic of amusement parks**.
+A compilation of pages, elements made in HTML5 and CSS3, all **connected to the topic of amusement parks**.
 
 **Pages**:
 1. Information kiosk
