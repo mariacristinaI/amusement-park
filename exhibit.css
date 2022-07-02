@@ -1,0 +1,493 @@
+/*** BASE STYLE***/
+:root {
+    --penguin-face: white;
+    --penguin-picorna: #ffa500;
+    --penguin-skin: #526565;
+    width: 100vw;
+  }
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+html:focus-within {
+    scroll-behavior: smooth;
+}
+  
+body {
+    background: linear-gradient(45deg, rgb(118, 201, 255), rgb(247, 255, 222));
+    height: 100vh;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    width: 100%;
+}
+  
+.navigation {
+    background-color: #222233;
+    position: relative !important;
+}
+    #nav-bar {
+        font-size: 2.5rem;
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+    }
+    #nav-bar a {
+        color: #faf0e6;
+        display: block;
+        float: left;
+        font-family: Raleway, sans-serif;
+        padding: 14px 30px;
+        text-align: center;
+        text-decoration: none;
+    }
+    #nav-bar a:hover {
+        background-color: rgb(203, 241, 228);
+        border: 3px solid rgba(255, 255, 255, 0.5);
+        color: black;
+    }
+
+.funfair {
+    border: 3px solid #a92f41;
+}
+
+ul {
+    list-style: none;
+}
+
+.sun {
+    background-color: #fffd33;
+    border-radius: 50%;
+    height: 200px;
+    position: fixed;
+    right: -75px;
+    top: -75px;
+    width: 200px;
+}
+
+.left-mountain {
+    background: linear-gradient(rgb(203, 241, 228), rgb(80, 183, 255));
+    height: 300px;
+    margin-top: 100px;
+    position: absolute;
+    transform: skew(-22deg, 35deg);
+    width: 300px;
+    z-index: 1;
+}
+
+.back-mountain {
+    background: linear-gradient(rgb(203, 241, 228), rgb(47, 170, 255));
+    height: 300px;
+    left: 220px;
+    position: absolute;
+    top: 250px;
+    transform: rotate(45deg);
+    width: 300px;
+    z-index: 1;
+}
+.ground {
+    background: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));
+    height: calc(100vh - 300px);
+    margin-top: -58px;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+}
+  
+/*** PENGUIN ***/
+.penguin {
+    height: 300px;
+    margin: 75px auto auto auto;
+    position: relative;
+    transition-delay: 0ms;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    width: 300px;
+    z-index: 4;
+}
+.penguin:active {
+    cursor: not-allowed;
+    transform: scale(1.5); /* increases its size by 50% in both dimensions.*/
+}
+.penguin * { /*Targets all descendent elements of the .penguin element.*/
+    position: absolute;
+}
+
+.penguin-head {
+    background: linear-gradient(45deg, var(--penguin-skin), rgb(239, 240, 228));
+    border-radius: 70% 70% 65% 65%;
+    height: 45%;
+    left: 25%;
+    top: 10%;
+    width: 50%;
+    z-index: 1;
+}
+.face {
+    background-color: var(--penguin-face);
+    border-radius: 70% 70% 60% 60%;
+    height: 70%;
+    top: 15%;
+    width: 60%;
+}
+    .face.left{
+        left: 5%;
+    }
+    .face.right {
+        right: 5%;
+    }
+    .chin {
+        background-color: var(--penguin-face);
+        border-radius: 70% 70% 100% 100%;
+        height: 70%;
+        left: 5%;
+        top: 25%;
+        width: 90%;
+    }
+    .eye {
+        background-color: black;
+        border-radius: 50%;
+        height: 17%;
+        top: 45%;
+        width: 15%;
+    }
+        .eye.left {
+            left: 25%;
+        }
+        .eye.right {
+            right: 25%;
+        }
+        .eye-lid {
+            background-color: var(--penguin-face);
+            border-radius: 50%;
+            height: 100%;
+            left: -23%;
+            top: 25%;
+            width: 150%;
+        }
+    .blush {
+        background-color: #a55494;
+        border-radius: 50%;
+        height: 10%;
+        top: 65%;
+        width: 15%;
+    }
+        .blush.left {
+            left: 15%;
+        }
+        .blush.right {
+            right: 15%;
+        }
+    .beak {
+        background-color: var(--penguin-picorna);
+        border-radius: 50%;
+        height: 10%;
+    }
+        .beak.top {
+            left: 40%;
+            top: 60%;
+            width: 20%;
+        }
+        .beak.bottom {
+            left: 42%;
+            top: 65%;
+            width: 16%;
+        }
+
+.penguin-body {
+    background: linear-gradient(45deg, rgb(134, 133, 133) 0%, rgb(234, 231, 231) 25%, white 67%);
+    border-radius: 80% 80% 100% 100%;
+    height: 45%;
+    left: 23.5%;
+    top: 40%;
+    width: 53%;
+}
+    .penguin-body::before {
+        background-color: var(--penguin-skin);
+        border-radius: 0% 0% 100% 100%;
+        content: '';
+        height: 45%;
+        left: 25%;
+        opacity: 70%;
+        position: absolute;
+        top: 10%;
+        width: 50%;
+    }
+    .shirt {
+        color: #6a6969;
+        font: bold 25px Raleway, sans-serif;
+        left: 127.5px;
+        top: 165px;
+        z-index: 1;
+    }
+        .shirt div {
+            font-weight: initial;
+            left: 12px;
+            top: 22.5px;
+        }
+        .shirt p {
+            top: 20px;
+        }
+    .arm {
+        background: linear-gradient(90deg, var(--penguin-skin), rgb(209, 210, 199));
+        border-radius: 30% 30% 30% 120%;
+        height: 60%;
+        width: 30%;
+        z-index: -1;
+    }
+        .arm.left {
+            animation-name: wave;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            left: 5%;
+            top: 35%;
+            transform: rotate(130deg) scaleX(-1);
+            transform-origin: top left;
+        }
+        .arm.right {
+            right: -5%;
+            top: 0%;
+            transform: rotate(-45deg);
+        }
+        @keyframes wave {
+        10% {
+            transform: rotate(110deg) scaleX(-1);
+        }
+        20% {
+            transform: rotate(130deg) scaleX(-1);
+        }
+        30% {
+            transform: rotate(110deg) scaleX(-1);
+        }
+        40% {
+            transform: rotate(130deg) scaleX(-1);
+        }
+        }
+
+    .foot {
+        background-color: var(--penguin-picorna);
+        border-radius: 50%;
+        height: 30%;
+        top: 85%;
+        width: 15%;
+        z-index: -1;
+    }
+        .foot.left {
+        left: 25%;
+        transform: rotate(80deg);
+        }
+        .foot.right {
+        right: 25%;
+        transform: rotate(-80deg);
+        }
+
+/*** Park Map ***/
+.information {
+    border-left: 5px solid rgba(120, 120, 120, 0.6);
+    color: black;
+    font-size: 2rem;
+    position: relative;
+    text-align: center;
+    z-index: 3;
+}
+.mark {
+    background-color: #fffd33;
+    color: #222233;
+    font-weight: 1000;
+}
+
+.information a {
+    color: #a55494;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+hr {
+    border: 2px solid rgba(120, 120, 120, 0.6);
+    margin: 0.5rem 1.5rem;
+    position: relative;
+    z-index: 3;
+}
+
+.information, footer {
+    font-family: Raleway, sans-serif;
+}
+
+footer {
+    background-color: #222233;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #faf0e6;
+    clip-path: polygon(6% 100%, 95% 100%, 100% 0, 0 0);
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100vw;
+    padding-top: 1rem;
+    padding-bottom: 15px;
+    position: absolute;
+    z-index: 3;
+}
+  
+/*** Ferris Wheel***/
+.wheel {
+    animation-name: wheel;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border: 2px solid black;
+    border-radius: 50%;
+    height: 55vw;
+    margin-left: 50px;
+    margin-top: 1rem;
+    max-height: 500px;
+    max-width: 500px;
+    position: fixed;
+    width: 55vw;
+    z-index: 3;
+}
+    .line {
+        background-color: black;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform-origin: 0% 0%; /* determines around which point the element is rotated, the current values offset the origin point by 0% from the left and 0% from the top, setting it to the top left corner of the element.*/
+        width: 50%;
+    }
+      .line:nth-of-type(2) {
+        transform: rotate(60deg);
+      }
+      .line:nth-of-type(3) {
+        transform: rotate(120deg);
+      }
+      .line:nth-of-type(4) {
+        transform: rotate(180deg);
+      }
+      .line:nth-of-type(5) {
+        transform: rotate(240deg);
+      }
+      .line:nth-of-type(6) {
+        transform: rotate(300deg);
+      }
+  
+    .cabin {
+      animation: cabins 15s ease-in-out infinite;
+      background-color: #c2392b;
+      border: 2px solid;
+      height: 20%;
+      position: absolute;
+      transform-origin: 50% 0%;
+      top: 50%;
+      width: 20%;
+    }
+      .cabin:first-of-type {
+        right: -8.5%;
+        top: 50%;
+      }
+      .cabin:nth-of-type(2) {
+        right: 17%;
+        top: 93.5%;
+      }
+      .cabin:nth-of-type(3) {
+        right: 67%;
+        top: 93.5%;
+      }
+      .cabin:nth-of-type(4) {
+        left: -8.5%;
+        top: 50%;
+      }
+      .cabin:nth-of-type(5) {
+        left: 17%;
+        top: 7%;
+      }
+      .cabin:nth-of-type(6) {
+        right: 17%;
+        top: 7%;
+      }
+  
+  @keyframes wheel {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes cabins {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      background-color: #fefd4a;
+    }
+    50% {
+      background-color: #b33286;
+    }
+    75% {
+      background-color: #fefd4a;
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+  
+/*** MEDIA QUERIES ***/
+@media only screen and (max-width: 1000px) and (min-width:400px) {
+.back-mountain {
+    left: 220px;
+    top: 300px;
+}
+}
+@media only screen and (max-width: 720px) {
+    #nav-bar a {
+        background-color: rgb(20, 30, 40);
+        border: 1px solid #faf0e6;
+        font-size: 1.5rem;
+    }
+    .ground {
+        height: calc(80vh - 300px);
+    }
+    hr {
+        margin: 0.5rem 1.5rem;
+    }
+    .information {
+        background: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));
+        margin: 2rem 0rem;
+        padding: 1rem 2rem;
+        text-align: justify;
+    }
+    .wheel {
+        position: absolute;
+    }
+    footer {
+        background-color: #222233;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        color: #faf0e6;
+        clip-path: polygon(6% 100%, 95% 100%, 100% 0, 0 0);
+    }
+        footer p {
+            padding-top: 1rem;
+        }
+}
+
+@media only screen and (max-width: 600px) {
+#nav-bar {
+    overflow: visible;
+}
+    #nav-bar a {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        float: none;
+        width: 100%;
+    }
+.left-mountain {
+    transform: skew(-20deg, 40deg);
+}
+.back-mountain {
+    left: 240px;
+    top: 450px;
+}
+}
