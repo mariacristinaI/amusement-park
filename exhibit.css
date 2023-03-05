@@ -288,12 +288,16 @@ ul {
 
 /*** Park Map ***/
 .information {
-    border-left: 5px solid rgba(120, 120, 120, 0.6);
+    background-color: #efeded;
+    border: 2px solid #969f99;
+    border-left: 5px solid #a92f41;
+    box-shadow: 9px 0px 10px -5px rgba(0,0,0,0.42);
     color: black;
     font-size: 2rem;
     position: relative;
     text-align: center;
     z-index: 3;
+    transform: rotate(-6deg);
 }
 .mark {
     background-color: #fffd33;
@@ -305,6 +309,14 @@ ul {
     color: #a55494;
     text-decoration: none;
     font-weight: bold;
+}
+
+.information > p, .information > ul {
+    margin-left: 30%;
+    text-align: justify;
+}
+.information > ul {
+    list-style: disclosure-closed;
 }
 
 hr {
@@ -342,7 +354,7 @@ footer {
     border-radius: 50%;
     height: 55vw;
     margin-left: 50px;
-    margin-top: 1rem;
+    margin-top: -5%;
     max-height: 500px;
     max-width: 500px;
     position: fixed;
