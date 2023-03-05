@@ -49,6 +49,7 @@ body {
 }
 .funfair {
   border: 3px solid #a92f41;
+  background-color: #a92f41 !important;
 }
 
 ul {
